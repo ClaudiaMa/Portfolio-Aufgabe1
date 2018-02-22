@@ -77,7 +77,7 @@ public class Anzeige implements Serializable {
         return titel;
     }
 
-    public void setTeitel(String titel) {
+    public void setTitel(String titel) {
         this.titel = titel;
     }
     

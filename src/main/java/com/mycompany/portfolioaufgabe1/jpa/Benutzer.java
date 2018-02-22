@@ -51,7 +51,7 @@ public class Benutzer implements Serializable {
         return benutzername;
     }
 
-    public void setBenutzername(String beutzername) {
+    public void setBenutzername(String benutzername) {
         this.benutzername = benutzername;
     }
     
