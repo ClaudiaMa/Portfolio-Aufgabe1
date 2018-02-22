@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
@@ -27,8 +28,9 @@ public class Anzeige implements Serializable {
     private static final long serialVersionUID = 1L;
     
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id = 0;
+    
     private String art =""; //Angebot oder Besuch
     private String titel ="";
     
