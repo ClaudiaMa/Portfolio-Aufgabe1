@@ -20,6 +20,8 @@ import javax.persistence.OneToMany;
 @Entity
 public class Benutzer implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    
     @Id
     @GeneratedValue
     private String benutzername = "";
@@ -33,7 +35,7 @@ public class Benutzer implements Serializable {
     private String ort = "";
     private String land = "";
     private String email = "";
-    private int telfonnummer = 0;
+    private int telefonnummer = 0;
     
     
     @OneToMany //(mappedBy="benutzer")??
@@ -49,9 +51,91 @@ public class Benutzer implements Serializable {
         return benutzername;
     }
 
-    public void setId(String beutzername) {
+    public void setBenutzername(String beutzername) {
         this.benutzername = benutzername;
     }
+    
+    public String getPasswortHash() {
+        return passwortHash;
+    }
 
+    public void setPassowrtHash(String passwortHash) {
+        this.passwortHash = passwortHash;
+    }
+    
+    public String getVorname() {
+        return vorname;
+    }
+
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
+    }
+    
+    public String getNachname() {
+        return nachname;
+    }
+
+    public void setNachname(String nachname) {
+        this.nachname = nachname;
+    }
+
+    public String getStraße() {
+        return straße;
+    }
+
+    public void setStraße(String straße) {
+        this.straße = straße;
+    }
+    
+    public int getHausnummer() {
+        return hausnummer;
+    }
+
+    public void setHausnummer(int hausnummer) {
+        this.hausnummer = hausnummer;
+    }
+    
+    public int getPlz() {
+        return plz;
+    }
+
+    public void setPlz(int plz) {
+        this.plz = plz;
+    }
+    
+    public String getOrt() {
+        return ort;
+    }
+
+    public void setOrt(String ort) {
+        this.ort = ort;
+    }
+    
+    public String getLand() {
+        return land;
+    }
+
+    public void setLand(String land) {
+        this.land = land;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public int getTelefonnummer() {
+        return telefonnummer;
+    }
+
+    public void setTelefonnummer(int telefonnummer) {
+        this.telefonnummer = telefonnummer;
+    }
+    
+   
+       
        
 }

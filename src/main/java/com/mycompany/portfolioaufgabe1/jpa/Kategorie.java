@@ -21,6 +21,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Kategorie implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue
@@ -42,6 +43,12 @@ public class Kategorie implements Serializable {
         this.slug = slug;
     }
 
+    public String getName() {
+        return name;
+    }
     
-    
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }

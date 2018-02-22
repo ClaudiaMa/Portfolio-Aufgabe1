@@ -18,7 +18,8 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Foto implements Serializable {
 
-    
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue
     private long id;
@@ -36,7 +37,20 @@ public class Foto implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-
     
+    public String getBezeichnung() {
+        return bezeichnung;
+    }
+
+    public void setBezeichnung(String bezeichnung) {
+        this.bezeichnung = bezeichnung;
+    }
+    public String getBilddaten() {
+        return bilddaten;
+    }
+
+    public void setBilddaten(String bilddaten) {
+        this.bilddaten = bilddaten;
+    }
     
 }
