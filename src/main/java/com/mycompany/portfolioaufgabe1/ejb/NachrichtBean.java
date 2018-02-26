@@ -30,7 +30,7 @@ public class NachrichtBean {
    
 
     public List<Nachricht> findAll() {
-        return em.createQuery("SELECT a FROM anzeige a")
+        return em.createQuery("SELECT n FROM nachricht n")
                  .getResultList();
     }
 
