@@ -16,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 
 /**
@@ -45,7 +46,7 @@ public class Anzeige implements Serializable {
     
     
     
-    @ManyToMany //(mappedBy="anzeige")??
+    @ManyToMany(mappedBy="anzeige")
     List<Kategorie> kategorien = new ArrayList<>();
 
     //veröffentlicht
@@ -53,10 +54,11 @@ public class Anzeige implements Serializable {
     Benutzer benutzer = new Benutzer();
 
     //merkt sich
-    @ManyToMany //(mappedBy="anzeige")??
+    @ManyToMany
     List<Benutzer> benutzern = new ArrayList<>();
         
-
+    @OneToMany(mappedBy="anzeige")
+    List<Foto> fotos = new ArrayList<>();
     
     
     public Long getId() {

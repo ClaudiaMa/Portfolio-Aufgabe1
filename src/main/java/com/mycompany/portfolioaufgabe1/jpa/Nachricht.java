@@ -24,10 +24,10 @@ public class Nachricht implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id =0;
     
-    private String von = "";
-    private String an = "";
+    private String vonBenutzer = "";
+    private String anBenutzer = "";
     private String zuArtikel = ""; //??Nummer oder Bezeichnung
     
     @Lob
@@ -44,20 +44,20 @@ public class Nachricht implements Serializable {
         this.id = id;
     }
 
-    public String getVon() {
-        return von;
+    public String getVonBenutzer() {
+        return vonBenutzer;
     }
     
-    public void setVon(String von){
-        this.von = von;
+    public void setVonBenutzer(String vonBenutzer){
+        this.vonBenutzer = vonBenutzer;
     }
     
-    public String getAn(){
-        return an;
+    public String getAnBenutzer(){
+        return anBenutzer;
     }
     
-    public void setAn(String an){
-        this.an = an;
+    public void setAnBenutzer(String anBenutzer){
+        this.anBenutzer = anBenutzer;
     }
     
     public String getZuArtikel(){

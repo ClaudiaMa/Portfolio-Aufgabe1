@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 /**
@@ -23,9 +24,11 @@ public class Foto implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long id = 0;
     
+    @Lob
     private String bezeichnung ="";
+    
     private String bilddaten ="";
     
     @ManyToOne

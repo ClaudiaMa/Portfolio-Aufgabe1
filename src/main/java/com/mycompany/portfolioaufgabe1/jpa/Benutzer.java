@@ -39,13 +39,13 @@ public class Benutzer implements Serializable {
     private int telefonnummer = 0;
     
     
-    @OneToMany //(mappedBy="benutzer")??
+    @OneToMany(mappedBy="benutzer")
     List<Nachricht> nachrichten = new ArrayList<>();
     
-    @OneToMany //(mappedBy="benutzer")??
+    @OneToMany(mappedBy="benutzer")
     List<Anzeige> anzeigen1 = new ArrayList<>();
     
-    @ManyToMany //(mappedBy="benutzer")??
+    @ManyToMany(mappedBy="benutzer")
     List<Anzeige> anzeigen2 = new ArrayList<>();
     
     public String getBenutzername() {

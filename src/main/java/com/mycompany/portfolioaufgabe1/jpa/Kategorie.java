@@ -26,14 +26,14 @@ public class Kategorie implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long slug;
+    private long slug = 0;
     
     private String name ="";
     
     @ManyToMany
     List<Anzeige> anzeigen = new ArrayList<>();
     
-    @OneToMany // (mappedBy="kategorie") ??
+    @OneToMany(mappedBy="kategorie")
     List<Kategorie> kategorien = new ArrayList<>();
 
     public Long getSlug() {
